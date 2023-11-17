@@ -1,0 +1,2 @@
+*CHE OR*==say "sono le $(date +"%l") e $([ $(date +"%-M") -eq 0 ] || date +"%-M")"
+*CHE GIORNO*==say "oggi è $(date +"%A %d %h %Y")"

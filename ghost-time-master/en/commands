@@ -1,0 +1,2 @@
+*WHAT*TIME*==say "It is $( [ $pg_time_format -eq 12 ] && date +"%l" || date +"%k") $([ $(date +"%-M") -eq 0 ] && echo "o'clock" || date +"%M")"
+*WHAT*DAY*==say "Today is $(LC_TIME="$language.UTF-8" date +"%A %d %B %Y")"
