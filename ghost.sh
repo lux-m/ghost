@@ -171,7 +171,7 @@ done
 
 if $jv_do_start_in_background; then
     # Check if ghost is already running in background
-    if gt_is_started; then
+    if jv_is_started; then
         jv_error "ghost is already running"
         jv_warning "run ghost -q to stop it"
         exit 1
@@ -216,7 +216,7 @@ EOM
 fi
 
 if [ "$jv_api" == false ]; then
-    # Check if Jarvis is already running in background
+    # Check if ghost is already running in background
     if jv_is_started; then
         options=('Show ghost output'
                  'Listen now for a command'
