@@ -3,7 +3,6 @@
 # | ghost by lux - MIT license |
 # | http://openghost.com                  |
 # +----------------------------------------+
-flags='bc:ihjklmnp:qrs:uvwx:z'
 jv_show_help () { cat <<EOF
 
     Usage: ghost [-$flags]
