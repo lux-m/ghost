@@ -52,7 +52,7 @@ jv_json=false
 # Public: ip address of ghost
 # 
 #   echo $jv_ip
-#   192.168.1.20
+#   192.168.0.28
 jv_ip="$(/sbin/ifconfig | sed -En 's/127.0.0.1//;s/.*inet (ad[d]?r:)?(([0-9]*\.){3}[0-9]*).*/\2/p')"
 
 # Internal: indicates if ghost is paused
@@ -64,7 +64,7 @@ jv_sig_pause=$(kill -l SIGUSR1)
 # Internal: signal number of SIGUSR2 to trigger command mode
 jv_sig_listen=$(kill -l SIGUSR2)
 
-# Internal: indicats if jarvis has been updated to ask for restart
+# Internal: indicats if ghost has been updated to ask for restart
 jv_ghost_updated=false
 
 # Internal: check if all dependencies are installed
@@ -183,7 +183,7 @@ say () {
 #
 # Returns the return code of curl
 #
-#   $> *COMMAND*==gt_curl "http://192.168.1.1/action" && say "Done"
+#   $> *COMMAND*==gt_curl "http://192.168.0.28/action" && say "Done"
 jv_curl () {
     local curl_command="curl --silent --fail --show-error $@"
     $verbose && jv_debug "DEBUG: $curl_command"
